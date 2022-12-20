@@ -10,7 +10,6 @@ class Game:
         self.grid = random.choices(string.ascii_uppercase, k = 9)
 
     def is_valid(self, word):
-            # [...]
         if not word:
             return False
         letters = self.grid.copy() # Consume letters from the grid
@@ -27,4 +26,3 @@ class Game:
         response = requests.get(f"https://wagon-dictionary.herokuapp.com/{word}")
         json_response = response.json()
         return json_response['found']
-
