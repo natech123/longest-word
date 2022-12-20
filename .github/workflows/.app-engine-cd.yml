@@ -18,7 +18,7 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
-        service account:  gha-longest-word@wagon-bootcamp-372110.iam.gserviceaccount.com
+        service_account:  gha-longest-word@wagon-bootcamp-372110.iam.gserviceaccount.com
         credentials_json: '${{ secrets.GCP_SA_KEY_LE_WAGON }}'
 
     # Use Google official GHA to deploy 🎉
