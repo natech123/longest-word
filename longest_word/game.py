@@ -11,6 +11,15 @@ class Game:
 
     def is_valid(self, word: str) -> bool:
         """Return True if and only if the word is valid, given the Game's grid"""
-        combine = list(word) + self.grid
+        # combine = list(word) + self.grid
 
-        return len(set(combine)) == 9
+        # return len(set(combine)) == 9
+        if not word:
+            return False
+        letters = self.grid.copy() # Consume letters from the grid
+        for letter in word:
+            if letter in letters:
+                letters.remove(letter)
+            else:
+                return False
+        return True
