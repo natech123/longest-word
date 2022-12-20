@@ -3,3 +3,4 @@ service: longest-word # Give a name to your app
 handlers: # Define how to handle incoming requests. Here, any request will be handled by main.py
 - url: /.*
   script: main.py
+service account:  gha-longest-word@wagon-bootcamp-372110.iam.gserviceaccount.com
